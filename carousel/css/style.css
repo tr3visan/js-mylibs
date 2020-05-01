@@ -1,0 +1,104 @@
+body {
+	width: 100%;
+	height: 100vh;
+	font-family: 'Manrope', sans-serif;
+	background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.slider-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	width: 330px;
+	height: 180px;
+}
+
+.slider-wrapper ul {
+	position: relative;
+	left: 0;
+	width: max-content;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	transition: 250ms ease;
+}
+
+.slider-wrapper li {
+	width: 330px;
+	height: 100%;
+	list-style: none;
+	display: inline-block;
+	margin-left: -3px;
+	position: relative;
+}
+
+.slider-wrapper li p {
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 24px;
+	line-height: 28px;
+	margin: 0;
+}
+
+.slider-wrapper li:nth-of-type(1) {
+	background: linear-gradient(118.74deg,
+	#4E54C8 0%, #8F94FB 99.99%, #F64F59 100%, #8F94FB 100%);
+	margin-left: 0;
+}
+
+.slider-wrapper li:nth-of-type(2) {
+	background: linear-gradient(118.74deg,
+	#C31432 0%, #240B36 99.99%, #8F94FB 100%, #240B36 100%);
+}
+
+.slider-wrapper li:nth-of-type(3) {
+	background: linear-gradient(118.74deg,
+	#30E88F 0%, #FF8D35 100%);
+}
+
+.controll {
+	position: absolute;
+	background: rgba(248, 248, 248, 0.3);
+	box-shadow: 6px 4px 8px rgba(248, 248, 248, 0.15);
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	z-index: 1;
+	transition: 250ms ease;
+	cursor: pointer;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.controll img {
+	width: 70%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	pointer-events: none;
+}
+
+.controll:hover {
+	background: rgba(248, 248, 248, 0.4);
+	box-shadow: rgba(248, 248, 248, 0.25);
+}
+
+.controll-right {
+	right: 16px;
+}
+
+.controll-left {
+	left: 16px;
+}
+
+.controll-left img {
+	transform: translate(-50%,-50%) scaleX(-1);
+}
